@@ -1,0 +1,277 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Customer Master</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="form" class="page" id="inform">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block-title">Customer Data Entry Form</div>
+       
+        <div class="content-block">
+        <div class="row">
+          <!--<div class="col-30">
+            <input type="submit" value="Check" class="button button-big button-fill color-red" onclick="checkAddress();"/>
+          </div>-->
+          <div class="col-30">
+              <a href="#" class="back link"> <i class="icon icon-back"></i><span><input type="reset" value="Reset" class="button button-big button-fill color-red"/></span></a>
+          </div>
+            <div class="col-30">
+            <input type="submit" value="Check" class="button button-big button-fill color-orange" onclick="checkAddress();"/>
+          </div>
+          <div class="col-30">
+            <input type="submit" value="Submit" class="button button-big button-fill color-green" onclick="postAddress();" id="blah"/>
+          </div>
+        </div>
+      </div>
+        
+      <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Cell-Phone</div>
+                <div class="item-input">
+                  <input type="Phone" placeholder="Cell-Phone" name="cellphone"/>
+                </div>
+              </div>
+            </div>
+          </li> 
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Name of Owner</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Name of owner" name="nameowner" id="nameowner"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Business Name</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Name of business" name="namebusiness" id="namebusiness"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Address 1</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Address 1" name="address1"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Address 2</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Address 2" name="address2"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Place/Pincode</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Name of City or Village" name="vtname"/><input type="number" placeholder="Pincode" name="pincode"/>
+                    <input type="text" placeholder="Taluka/Tehsil" name="taluka"/>
+                    <input type="text" placeholder="District" name="district"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+            <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Email</div>
+                <div class="item-input">
+                  <input type="email" placeholder="Email" name="email"/>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+            <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Potential</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Potential" name="potential"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Major Brands</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Major Brands" name="majorbrands"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+            <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Purchase From</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Purchase From" name="purchasefrom"/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+            <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">latitude</div>
+                <div class="item-input">
+                  <input type="text" placeholder="latitude" name="latitude" id="latitude" readonly/>
+                  <button type="button" onclick="loadmap();" style="float:right;">Get Location</button>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+            <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">longitude</div>
+                <div class="item-input">
+                  <input type="text" placeholder="longitude" name="longitude" id="longitude" readonly/>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+            <!--
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Gender</div>
+                <div class="item-input">
+                  <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </li>
+            -->
+          <li>
+            <div class="list-block">
+            <ul>
+              <li>
+                <label class="label-radio item-content">
+                  <input type="radio" name="ks-radio" value="servicestation" checked="checked"/>
+                  <div class="item-inner">
+                    <div class="item-title">Service Station</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="label-radio item-content">
+                  <input type="radio" name="ks-radio" value="Distributor"/>
+                  <div class="item-inner">
+                    <div class="item-title">Distributor</div>
+                  </div>
+                </label>
+              </li>
+                <li>
+                <label class="label-radio item-content">
+                  <input type="radio" name="ks-radio" value="Dealer"/>
+                  <div class="item-inner">
+                    <div class="item-title">Dealer</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="label-radio item-content">
+                  <input type="radio" name="ks-radio" value="Garage"/>
+                  <div class="item-inner">
+                    <div class="item-title">Garage</div>
+                  </div>
+                </label>
+              </li>
+              <li>
+                <label class="label-radio item-content">
+                  <input type="radio" name="ks-radio" value="Retail"/>
+                  <div class="item-inner">
+                    <div class="item-title">Retail</div>
+                  </div>
+                </label>
+              </li>
+            </ul>
+          </div>
+          </li>
+          
+            <!--
+          <li>
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Switch</div>
+                <div class="item-input">
+                  <label class="label-switch">
+                    <input type="checkbox"/>
+                    <div class="checkbox"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title label">Slider</div>
+                <div class="item-input">
+                  <div class="range-slider">
+                    <input type="range" min="0" max="100" value="50" step="0.1"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          -->    
+          <li class="align-top">
+            <div class="item-content">
+              <div class="item-inner"> 
+                <div class="item-title label">Remarks, if any</div>
+                <div class="item-input">
+                  <textarea rows="4" name="remarks">remarks</textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
