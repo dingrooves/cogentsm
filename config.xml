@@ -44,7 +44,8 @@
  -->
 
  <!-- Plugins -->
- <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+ <plugin spec=“https://github.com/apache/cordova-plugin-geolocation.git” source=“git” />
+ 
  <!-- Core plugins -->
  <plugin name="cordova-plugin-battery-status" />
  <plugin name="cordova-plugin-camera" />
