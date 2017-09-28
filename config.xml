@@ -44,7 +44,7 @@
  -->
 
  <!-- Plugins -->
-
+ <gap:plugin name="org.apache.cordova.geolocation" />
  <!-- Core plugins -->
  <plugin name="cordova-plugin-battery-status" />
  <plugin name="cordova-plugin-camera" />
@@ -71,6 +71,7 @@
  <plugin name="com.phonegap.plugins.barcodescanner" />
  -->
 
+ 
  <!-- Define app icon for each platform. -->
  <icon src="icon.png" />
  <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
