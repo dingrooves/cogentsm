@@ -64,7 +64,7 @@ function postAddress()
     var jsonstr = JSON.stringify(formData);
     $$.ajax({ 
               type:"POST",
-              url: "//admin.cogentautodrive.com/inphp/post_add.php",
+              url: "http://admin.cogentautodrive.com/inphp/post_add.php",
               data:'json=' + jsonstr,
               dataType:'json',
               success: function(data){
@@ -81,7 +81,7 @@ function checkAddress()
     var jsonstr = JSON.stringify(formData);
     $$.ajax({ 
               type:"POST",
-              url: "//admin.cogentautodrive.com/inphp/check_phone.php",
+              url: "http://admin.cogentautodrive.com/inphp/check_phone.php",
               data:'json=' + jsonstr,
               dataType:'json',
               success: function(data){
