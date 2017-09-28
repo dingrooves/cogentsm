@@ -97,3 +97,12 @@ function setvalue(data)
     document.getElementById("nameowner").value = data[0].nameowner;
     document.getElementById("namebusiness").value = data[0].namebusiness;
 }
+function loadcoord()
+{
+    navigator.geolocation.getCurrentPosition(disp);
+
+   //$('.lat-view').html(pos.coords.latitude);
+   //$('.long-view').html(pos.coords.longitude);
+   document.getElementById("latitude").value=pos.coords.latitude;
+   document.getElementById("longitude").value=pos.coords.longitude;
+}
