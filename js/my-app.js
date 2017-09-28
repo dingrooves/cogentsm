@@ -48,20 +48,4 @@ function createContentPage() {
 }
 
 //addition by DG
-$(document).ready(function () {
-    document.addEventListener("deviceready", onDeviceReady, false);
- });
 
-function onDeviceReady() {
-    window.plugins.phonenumber.get(success, failed);
-
-    document.addEventListener("backbutton", onBackKeyDown, false);
-}
-
-function success(phonenumber) {
-    document.getElementById("myphone").value=phonenumber;
-}
-
-function failed(phonenumber) {
-    document.getElementById("myphone").value="00";
-}
