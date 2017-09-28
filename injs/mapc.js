@@ -100,9 +100,13 @@ function setvalue(data)
 function loadcoord()
 {
     navigator.geolocation.getCurrentPosition(disp);
-
+    
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
-   document.getElementById("latitude").value=pos.coords.latitude;
-   document.getElementById("longitude").value=pos.coords.longitude;
+   //document.getElementById("latitude").value=pos.coords.latitude;
+   //document.getElementById("longitude").value=pos.coords.longitude;
 }
+function disp(pos) {
+        document.getElementById("latitude").value=pos.coords.latitude;
+   document.getElementById("longitude").value=pos.coords.longitude;
+    }
