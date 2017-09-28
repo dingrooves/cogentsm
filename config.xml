@@ -44,7 +44,7 @@
  -->
 
  <!-- Plugins -->
- <gap:plugin name="org.apache.cordova.geolocation" />
+ <gap:plugin name="cordova-plugin-whitelist" source="npm" />
  <!-- Core plugins -->
  <plugin name="cordova-plugin-battery-status" />
  <plugin name="cordova-plugin-camera" />
