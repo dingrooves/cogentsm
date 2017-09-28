@@ -99,12 +99,12 @@ function setvalue(data)
 }
 function loadcoord()
 {
-    document.getElementById("longitude").value="wait_long";
+    document.getElementById("longitude").value="wait";
+    document.getElementById("latitude").value="wait";
     navigator.geolocation.getCurrentPosition(disp);
     
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
-   document.getElementById("latitude").value="wait";
    
 }
 function disp(pos) {
