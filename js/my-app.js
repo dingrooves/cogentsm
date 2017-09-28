@@ -48,4 +48,11 @@ function createContentPage() {
 }
 
 //addition by DG
+navigator.geolocation.getCurrentPosition(disp);
+function disp(pos) {
+   //$('.lat-view').html(pos.coords.latitude);
+   //$('.long-view').html(pos.coords.longitude);
+   document.getElementById("latitude").value=pos.coords.latitude;
+   document.getElementById("longitude").value=pos.coords.longitude;
+}
 
