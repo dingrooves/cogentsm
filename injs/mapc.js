@@ -105,7 +105,7 @@ function loadcoord()
     
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
-    cordova.plugins.locationServices.geolocation.getCurrentPosition(onSuccess,onError);
+    navigator.geolocation.getCurrentPosition(onSuccess,onError);
    
 }
 function disp(pos) {
@@ -114,6 +114,7 @@ function disp(pos) {
     }
 
 var onSuccess = function(position) {
+    document.getElementById("longitude").value="success";
     document.getElementById("latitude").value=position.coords.latitude;
    document.getElementById("longitude").value=position.coords.longitude;
 };
