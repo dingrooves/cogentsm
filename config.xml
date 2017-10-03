@@ -70,7 +70,7 @@
  <!--
  <plugin name="com.phonegap.plugins.barcodescanner" />
  -->
-
+<plugin name="fr.louisbl.cardova.gpslocation" spec="0.1.0" source="pgb" />
  
  <!-- Define app icon for each platform. -->
  <icon src="icon.png" />
