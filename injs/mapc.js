@@ -105,7 +105,7 @@ function loadcoord()
     
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
-    GPSLocation.getCurrentPosition(onSuccess,onError);
+    cordova.plugins.locationServices.geolocation.getCurrentPosition(onSuccess,onError);
    
 }
 function disp(pos) {
