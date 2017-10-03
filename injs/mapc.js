@@ -101,13 +101,25 @@ function loadcoord()
 {
     document.getElementById("longitude").value="wait";
     document.getElementById("latitude").value="wait";
-    navigator.geolocation.getCurrentPosition(disp);
+    //navigator.geolocation.getCurrentPosition(disp);
     
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
+    GPSLocation.getCurrentPosition(onSuccess,onError);
    
 }
 function disp(pos) {
-        document.getElementById("latitude").value=pos.coords.latitude;
+   document.getElementById("latitude").value=pos.coords.latitude;
    document.getElementById("longitude").value=pos.coords.longitude;
     }
+
+var onSuccess = function(position) {
+    document.getElementById("latitude").value=position.coords.latitude;
+   document.getElementById("longitude").value=position.coords.longitude;
+};
+
+function onError(error)
+{
+    alert('code: ' + error.code + '\n' + 
+          'message: ' + error.message + '\n');
+};
