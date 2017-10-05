@@ -1,6 +1,7 @@
 var view, map,marker;
 function loadmap()
     {
+        GetGeolocation();
         document.getElementById("map").innerHTML = "";
         document.getElementById("latlong").innerHTML="";
         var layer = new ol.layer.Tile({
