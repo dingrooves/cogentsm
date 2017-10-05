@@ -101,12 +101,30 @@ function loadcoord()
 {
     document.getElementById("longitude").value="wait";
     document.getElementById("latitude").value="wait";
-    navigator.geolocation.getCurrentPosition(disp);
-    
+    //navigator.geolocation.getCurrentPosition(disp);
+    GetGeolocation();
    //$('.lat-view').html(pos.coords.latitude);
    //$('.long-view').html(pos.coords.longitude);
+    
 }
 function disp(pos) {
    document.getElementById("latitude").value=pos.coords.latitude;
    document.getElementById("longitude").value=pos.coords.longitude;
     }
+document.addEventListener("deviceready", GetGeoLocation , false);
+
+function GetGeolocation()
+{
+    var options = { timeout: 30000, enableHighAccuracy: true };
+    navigator.geolocation.getCurrentPosition(GetPosition, PositionError, options);
+}
+function GetPosition(position)
+{
+    document.getElementById("latitude").value=position.coords.latitude;
+    document.getElementById("longitude").value=position.coords.longitude;
+      
+}
+ 
+function PositionError() {
+      navigator.notification.alert('Could not find the current location.');
+}
