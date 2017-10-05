@@ -112,7 +112,7 @@ function disp(pos) {
    document.getElementById("latitude").value=pos.coords.latitude;
    document.getElementById("longitude").value=pos.coords.longitude;
     }
-document.addEventListener("deviceready", GetGeoLocation , false);
+
 
 function GetGeolocation()
 {
@@ -129,3 +129,6 @@ function GetPosition(position)
 function PositionError() {
       navigator.notification.alert('Could not find the current location.');
 }
+$(document).ready(function(){
+    document.addEventListener("deviceready", GetGeoLocation , false);
+});
